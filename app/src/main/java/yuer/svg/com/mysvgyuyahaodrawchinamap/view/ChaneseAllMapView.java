@@ -33,8 +33,10 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
+import yuer.svg.com.mysvgyuyahaodrawchinamap.MyApplication;
 import yuer.svg.com.mysvgyuyahaodrawchinamap.R;
 import yuer.svg.com.mysvgyuyahaodrawchinamap.model.ItemProvins;
+import yuer.svg.com.mysvgyuyahaodrawchinamap.utils.DensityUtil;
 import yuer.svg.com.mysvgyuyahaodrawchinamap.utils.LogUtils;
 
 
@@ -51,6 +53,7 @@ public class ChaneseAllMapView extends View {
     private float scale;
     private  ItemProvins itemProvins = null;
     private ExecutorService executorService = Executors.newFixedThreadPool(5);
+    private Paint drawText;
     private Handler handler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
@@ -111,6 +114,12 @@ public class ChaneseAllMapView extends View {
         paint = new Paint();
         paint.setStrokeWidth(1);
         paint.setAntiAlias(true);
+        drawText = new Paint();
+        drawText.setStrokeWidth(5);
+        drawText.setTextSize(16);
+        drawText.setColor(Color.WHITE);
+        drawText.setAntiAlias(true);
+        drawText.setStyle(Paint.Style.FILL);
         parseMap();
     }
 
@@ -131,6 +140,7 @@ public class ChaneseAllMapView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+        canvas.drawColor(Color.BLUE);
         canvas.save();
         LogUtils.e("yyh","scale: " + scale + "   集合的大小： "  + list.size());
         canvas.scale(scale,scale);
@@ -148,6 +158,15 @@ public class ChaneseAllMapView extends View {
 
         if(itemProvins != null){
             itemProvins.drawChinaMap(canvas,paint,true);
+        }
+        if(rectF != null){
+            String noteTip = "中国海域";
+            String noteTip2 = "该demo仅为学习android使用，我很爱国的";
+            float x = rectF.centerX() - drawText.measureText(noteTip)/2;
+            float x2 =rectF.centerX() - drawText.measureText(noteTip2)/2;
+            float y = rectF.bottom +50;
+            canvas.drawText(noteTip,x,y,drawText);
+            canvas.drawText(noteTip2,x2,y+50,drawText);
         }
     }
 
