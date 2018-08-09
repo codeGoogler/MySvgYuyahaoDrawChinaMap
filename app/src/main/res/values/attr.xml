@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- REditText -->
+    <declare-styleable name="REditText">
+        <attr name="object_foreground_color" format="color" />
+        <attr name="object_background_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="CustomserSlidingBar" >
+        <attr name="MyCurrentTranslateX" format="dimension"/>
+    </declare-styleable>
+</resources>
