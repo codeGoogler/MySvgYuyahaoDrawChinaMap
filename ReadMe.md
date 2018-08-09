@@ -48,6 +48,7 @@
 
 大写代表绝对位置, 小写代表相对位置。
 
+
 **SVG里面还有各种标签：**
 
 包括line直线，circle圆，rect矩形，eliipse椭圆，polygon多边形，等等
@@ -58,8 +59,14 @@
 
 ![ ](https://upload-images.jianshu.io/upload_images/4614633-868a9cc496eccb21.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+
+>地图项目地址： 
+>
+> https://github.com/androidstarjack/MySvgYuyahaoDrawChinaMap
 作为一个程序员，我们当然不能手动去做这个工作，那就涉及两个问题，一个是SVG的解析，一个是解析后的绘制。虽然有人已经完成了这个工作，但我觉得还是自己动手敲一遍为好！任何时候不要太过于依赖第三方的。
 
+**备注**：该demo仅为学习Android提供思路用，我很爱国的！
+ ![ 该demo仅为学习Android提供思路用，我很爱国的](https://upload-images.jianshu.io/upload_images/4614633-03384da3a20f8937.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ### 阅读更多
 
 [**终于，我还是下决心学Java后台了**](http://mp.weixin.qq.com/s?__biz=MzI3OTU0MzI4MQ==&mid=2247486120&idx=1&sn=db5f94ad8554bd2739d962b7724033f3&chksm=eb476636dc30ef2072bacb21fa532eae3c9ab9315fac62becfd052ad990857f7d400e6584e72&scene=21#wechat_redirect)
@@ -74,4 +81,5 @@
 
 [在这里获得的不仅仅是技术！](http://mp.weixin.qq.com/s?__biz=MzI3OTU0MzI4MQ==&mid=2247485647&idx=1&sn=e4f8d8e6412b337f565365fe819b37f5&chksm=eb476451dc30ed474976c93beccf2b4b5103b1b68f00e986b38354fdcaa9964b97e805329461&scene=21#wechat_redirect)
 
+![image](http://upload-images.jianshu.io/upload_images/4614633-96aa77eaf8e7e104?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
  
